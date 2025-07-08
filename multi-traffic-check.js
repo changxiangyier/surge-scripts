@@ -1,5 +1,6 @@
-
 console.log("🚀 脚本开始执行");
+console.log("📦 传入参数：", $argument.urls);
+
 // multi-traffic-check.js
 let urls = $argument.urls?.split("||") ?? [];
 
@@ -41,7 +42,7 @@ urls.forEach((url, index) => {
 
     doneCount++;
     if (doneCount === urls.length) {
-      console.log("✅ 脚本输出结果", result);
+      console.log("✅ 脚本输出结果", results.join('\n'));
       $done({ info: results.join('\n') });
     }
   });
