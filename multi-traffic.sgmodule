@@ -3,7 +3,7 @@
 #!author=fe fe
 
 [Script]
-多机场流量 = type=cron, cronexp=0 9 * * *, script-path=https://raw.githubusercontent.com/changxiangyier/surge-scripts/refs/heads/main/multi-traffic-check.js, timeout=15, argument=urls=
+多机场流量 = type=cron, cronexp=0 9 * * *, script-path=https://raw.githubusercontent.com/changxiangyier/surge-scripts/main/multi-traffic-check.js, timeout=15, argument=urls=
 
 [Panel]
 我的机场 = script-name=多机场流量, title=🌐 机场流量信息, content-key=info, style=info
