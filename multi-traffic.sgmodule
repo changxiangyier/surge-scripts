@@ -1,12 +1,9 @@
 #!name=多机场流量监控模块
-#!desc=支持多个机场订阅，安全参数注入方式，适用于公开仓库
+#!desc=支持多个机场，通过参数注入订阅地址
 #!author=fe fe
 
 [Script]
-多机场流量 = type=cron, cronexp=0 9 * * *, script-path=https://raw.githubusercontent.com/你的用户名/你的仓库名/main/multi-traffic-check.js, timeout=15
-
-# 参数说明：多个订阅链接用 || 分隔
-# 例：urls=https://sub1.com/xxx||https://sub2.com/yyy
+多机场流量 = type=cron, cronexp=0 9 * * *, script-path=https://raw.githubusercontent.com/你的用户名/你的仓库名/main/multi-traffic-check.js, timeout=15, argument=urls=
 
 [Panel]
 我的机场 = script-name=多机场流量, title=🌐 机场流量信息, content-key=info, style=info
